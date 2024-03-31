@@ -1,0 +1,18 @@
+
+
+table{
+    background-color: bisque;
+    width: 100%;
+    text-align: center;
+}
+td, th{
+    padding: 8px;
+    text-transform: uppercase;
+}
+form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    line-height: 10px;
+}

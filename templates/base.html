@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+</head>
+<body>
+    <table border=''>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll No</th>
+                <th>Class</th>
+                <th>Native</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in student_details %}
+                <tr>
+                    <td> {{i.Sname}} </td> 
+                    <td> {{i.SrollNo}} </td> 
+                    <td> {{i.Sclass}} </td> 
+                    <td> {{i.Snative}}</td> 
+                    <td>
+                         <a href="/update/{{i.id}}"> <button>Update</button> 
+                         <a href="/delete/{{i.id}}"> <button>Delete</button> 
+                    </td> 
+                </tr>
+
+            {% endfor %}
+        </tbody>
+   
+    </table>
+   <a href="/form/"> <button>Add Student</button></a>
+
+</body>
+</html>
