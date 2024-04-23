@@ -19,8 +19,8 @@ from django.urls import path
 from CRUDapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("base/",views.Student_view),
-    path("form/",views.Form_view),
-    path("delete/<id>/",views.Delete_view),
-    path("update/<id>/",views.Update_view),
+    path("",views.Student_view),
+    path("form/",views.Form_view, name="form"),
+    path("delete/<id>/",views.Delete_view, name="delete"),
+    path("update/<id>/",views.Update_view, name="update"),
 ]

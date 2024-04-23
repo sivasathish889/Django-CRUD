@@ -26,8 +26,8 @@
                     <td> {{i.Sclass}} </td> 
                     <td> {{i.Snative}}</td> 
                     <td>
-                         <a href="/update/{{i.id}}"> <button>Update</button> 
-                         <a href="/delete/{{i.id}}"> <button>Delete</button> 
+                         <a href="{% url "update" i.id %}"> <button>Update</button> 
+                         <a href="{% url "delete" i.id %}"> <button>Delete</button> 
                     </td> 
                 </tr>
 
@@ -35,7 +35,7 @@
         </tbody>
    
     </table>
-   <a href="/form/"> <button>Add Student</button></a>
+   <a href="{% url "form" %}"> <button>Add Student</button></a>
 
 </body>
 </html>
